@@ -7,9 +7,7 @@ import {TranslateService} from '@ngx-translate/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'maduhousehold';
-
-  constructor(private translate: TranslateService) {}
+  constructor(private translate: TranslateService) { }
 
   ngOnInit() {
     this.translate.setDefaultLang('en');

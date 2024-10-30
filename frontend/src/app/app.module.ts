@@ -3,8 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {AppTranslateModule} from './app-translate.module';
-import {TranslateModule} from '@ngx-translate/core';
+import {CoreModule} from './core/core.module';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {HttpClient, provideHttpClient, withInterceptors} from '@angular/common/http';
+import {HttpLoaderFactory} from './app-translation.factory';
+import {interceptors} from './core/interceptors/interceptors';
 
 @NgModule({
   declarations: [
@@ -12,11 +15,21 @@ import {TranslateModule} from '@ngx-translate/core';
   ],
   imports: [
     BrowserModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
     AppRoutingModule,
-    AppTranslateModule,
-    TranslateModule
+    CoreModule,
   ],
-  providers: [],
+  providers: [
+    provideHttpClient(
+      withInterceptors(interceptors)
+    )
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
