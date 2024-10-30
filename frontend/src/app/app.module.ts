@@ -8,6 +8,7 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpClient, provideHttpClient, withInterceptors} from '@angular/common/http';
 import {HttpLoaderFactory} from './app-translation.factory';
 import {interceptors} from './core/interceptors/interceptors';
+import {LayoutModule} from './layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {interceptors} from './core/interceptors/interceptors';
     }),
     AppRoutingModule,
     CoreModule,
+    LayoutModule,
   ],
   providers: [
     provideHttpClient(
