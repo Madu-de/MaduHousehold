@@ -27,7 +27,7 @@ describe('authInterceptor', () => {
             }
           }
         },
-        provideHttpClient(withInterceptors([authInterceptor])),
+        provideHttpClient(withInterceptors([interceptor])),
         provideHttpClientTesting(),
       ]
     });
