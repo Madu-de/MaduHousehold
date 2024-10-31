@@ -1,0 +1,26 @@
+:host {
+  position: relative;
+}
+
+input {
+  background-color: #f7f8f9;
+  padding: 14px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input:focus {
+  border: 1px solid #c3c3c3;
+  outline: none;
+}
+
+.eye {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+}

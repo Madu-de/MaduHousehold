@@ -1,0 +1,4 @@
+<input [type]="type()" [placeholder]="placeholder()">
+@if (isPassword()) {
+  <img [src]="type() == 'password' ? 'img/eye-closed.png' : 'img/eye-open.png'" class="eye" (click)="switchPasswordMode()" alt="eye">
+}
