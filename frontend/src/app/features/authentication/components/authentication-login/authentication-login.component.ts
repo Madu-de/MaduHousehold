@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-authentication-login',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './authentication-login.component.scss'
 })
 export class AuthenticationLoginComponent {
-
+  constructor(public router: Router) {
+  }
 }

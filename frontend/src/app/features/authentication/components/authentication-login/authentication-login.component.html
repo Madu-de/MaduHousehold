@@ -1,0 +1,8 @@
+<h2>{{ 'auth.welcome-back' | translate }}</h2>
+<app-input type="text" [placeholder]="'auth.enter-your-email-or-username' | translate"></app-input>
+<app-input type="password" [placeholder]="'auth.enter-your-password' | translate"></app-input>
+<div class="buttons">
+  <app-button appButtonType="secondary" (appButtonClick)="router.navigate(['..'])">{{ 'auth.back' | translate }}</app-button>
+  <app-button>{{ 'auth.login' | translate }}</app-button>
+</div>
+<hr>

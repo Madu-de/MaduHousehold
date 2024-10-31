@@ -1,6 +1,10 @@
 {
   "auth": {
     "login": "Login",
-    "register": "Registre"
+    "register": "Registre",
+    "welcome-back": "Bon retour !",
+    "enter-your-email-or-username": "Entrez votre email ou nom d'utilisateur",
+    "enter-your-password": "Entrez votre mot de passe",
+    "back": "Retour"
   }
 }
