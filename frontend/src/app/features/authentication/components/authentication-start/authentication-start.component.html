@@ -2,6 +2,7 @@
 <h1>Madu</h1>
 <h2>Household</h2>
 <div class="buttons">
-  <app-primary-button (appButtonClick)="router.navigate(['auth', 'login'])">{{ 'auth.login' | translate }}</app-primary-button>
-  <app-primary-button (appButtonClick)="router.navigate(['auth', 'register'])">{{ 'auth.register' | translate }}</app-primary-button>
+  <app-button (appButtonClick)="router.navigate(['auth', 'login'])">{{ 'auth.login' | translate }}</app-button>
+  <app-button appButtonType="secondary" (appButtonClick)="router.navigate(['auth', 'register'])">{{ 'auth.register' | translate }}</app-button>
+  <app-button appButtonType="tertiary">Was ist MaduHousehold?</app-button>
 </div>

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {AuthenticationLayoutComponent} from './layout/authentication-layout/authentication-layout.component';
 import {authGuard} from './core/guards/auth.guard';
-import {PrimaryButtonComponent} from './shared/components/primary-button/primary-button.component';
+import {ButtonComponent} from './shared/components/button/button.component';
 
 const routes: Routes = [
   {
@@ -12,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: PrimaryButtonComponent, // Temporary PrimaryButton (placeholder) -> In future: Dashboard
+    component: ButtonComponent, // Temporary PrimaryButton (placeholder) -> In future: Dashboard
     canActivate: [authGuard]
   }
 ];
