@@ -1,4 +1,7 @@
-<img src="img/full-logo.png" alt="full logo">
+<img src="img/full-logo.png" alt="full logo" (load)="imageLoaded.set(true)">
+@if (!imageLoaded()) {
+  <div class="loading"></div>
+}
 <h1>Madu</h1>
 <h2>Household</h2>
 <div class="buttons">

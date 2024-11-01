@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, signal} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
@@ -7,6 +7,8 @@ import {Router} from '@angular/router';
   styleUrl: './authentication-start.component.scss'
 })
 export class AuthenticationStartComponent {
+  imageLoaded = signal(false);
+
   constructor(public router: Router) {
   }
 }

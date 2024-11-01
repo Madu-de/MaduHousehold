@@ -12,10 +12,9 @@ import {LayoutModule} from './layout/layout.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import {
   GoogleLoginProvider,
-  GoogleSigninButtonModule,
+  GoogleSigninButtonModule, MicrosoftLoginProvider,
   SocialAuthServiceConfig, SocialLoginModule
 } from '@abacritt/angularx-social-login';
-import {environment} from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -54,9 +53,23 @@ import {environment} from '../environments/environment';
           {
             id: GoogleLoginProvider.PROVIDER_ID,
             provider: new GoogleLoginProvider(
-              environment.googleClientId
+              '', {
+                oneTapEnabled: false,
+              }
             )
           },
+          {
+            id: MicrosoftLoginProvider.PROVIDER_ID,
+            provider: new MicrosoftLoginProvider(
+              ''
+            )
+          }
+          /*{
+            id: FacebookLoginProvider.PROVIDER_ID,
+            provider: new FacebookLoginProvider(
+              ''
+            )
+          }*/
         ],
         onError: (err) => {
           console.error(err);

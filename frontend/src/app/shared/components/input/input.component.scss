@@ -10,6 +10,10 @@ input {
   width: 100%;
 }
 
+input.password {
+  width: calc(100% - 1.5rem - 15px * 2);
+}
+
 input:focus {
   border: 1px solid #c3c3c3;
   outline: none;

@@ -6,6 +6,7 @@ import {AuthenticationRoutingModule} from './authentication-routing.module';
 import { AuthenticationLoginComponent } from './components/authentication-login/authentication-login.component';
 import { AuthenticationRegisterComponent } from './components/authentication-register/authentication-register.component';
 import {SharedModule} from '../../shared/shared.module';
+import {GoogleSigninButtonModule} from '@abacritt/angularx-social-login';
 
 
 
@@ -20,6 +21,7 @@ import {SharedModule} from '../../shared/shared.module';
     TranslateModule,
     AuthenticationRoutingModule,
     SharedModule,
+    GoogleSigninButtonModule,
   ],
 })
 export class AuthenticationModule { }

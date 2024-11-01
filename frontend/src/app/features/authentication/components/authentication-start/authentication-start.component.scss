@@ -22,3 +22,23 @@ h2 {
   gap: 15px;
   width: 100%;
 }
+
+.loading {
+  background-color: #dddddd;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+  animation: loading 3s infinite ;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
